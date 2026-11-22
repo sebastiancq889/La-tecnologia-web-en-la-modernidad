@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Análisis sobre el impacto de las tecnologías web en la sociedad moderna y el mundo de los negocios.">
+    <title>Tecnologías Web: Impacto y Evolución</title>
+    
+    <!-- Estilos integrados para un diseño moderno y creativo -->
+    <style>
+        :root {
+            --primary-color: #2A1B38;
+            --secondary-color: #E040FB;
+            --accent-color: #00E5FF;
+            --text-color: #333;
+            --bg-color: #F4F7F6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Cabecera y Navegación */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #4A148C);
+            color: white;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Estructura Principal */
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            padding: 40px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Secciones y Artículos */
+        main section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin: 20px 0 10px 0;
+        }
+
+        h4 {
+            color: #555;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Multimedia */
+        .media-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .media-container img {
+            width: 50%;
+            border-radius: 8px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .media-container img:hover {
+            transform: scale(1.02);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Aside y Formulario */
+        aside {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: inherit;
+        }
+
+        button {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #b000cc;
+        }
+
+        /* Listas */
+        ol, ul {
+            margin: 15px 0 15px 25px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .media-container {
+                flex-direction: column;
+            }
+            .media-container img {
+                width: 100%;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado Semántico -->
+    <header>
+        <h1>Impacto de la Tecnología</h1>
+        <nav>
+            <ul>
+                <!-- Uso de rutas relativas según indicaciones -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/sociedad.html">Sociedad</a></li>
+                <li><a href="pages/negocios.html">Negocios</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Contenedor Principal -->
+        <main>
+            <!-- Sección 1: Introducción a la temática -->
+            <section id="introduccion">
+                <h2>El Ecosistema Digital</h2>
+                <p>Las tecnologías web han dejado de ser simples herramientas de comunicación para convertirse en el pilar fundamental sobre el que se construye la sociedad y la economía moderna. Desde la Web 1.0 hasta la inteligencia artificial integrada en el navegador, el salto evolutivo es innegable.</p>
+                
+                <div class="media-container">
+                    <!-- Imágenes con rutas relativas -->
+                    <img src="images/imagen1.jpg" alt="Representación de la red global de conexiones de internet">
+                    <img src="images/imagen2.jpg" alt="Persona trabajando de forma remota con una computadora portátil">
+                </div>
+            </section>
+
+            <!-- Sección 2: Artículos temáticos -->
+            <section id="impacto">
+                <h2>Análisis de Impacto</h2>
+                
+                <article>
+                    <h3>Transformación en la Sociedad</h3>
+                    <h4>Un mundo hiperconectado</h4>
+                    <p>La forma en que interactuamos, aprendemos y consumimos entretenimiento ha sido redefinida. La educación en línea y las redes sociales son ejemplos claros de cómo los protocolos web acercan el conocimiento a cualquier rincón del planeta.</p>
+                    
+                    <!-- Lista Desordenada -->
+                    <ul>
+                        <li>Democratización de la información.</li>
+                        <li>Nuevas modalidades de educación (E-learning).</li>
+                        <li>Activismo y participación ciudadana digital.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Revolución en los Negocios</h3>
+                    <h4>El comercio electrónico como estándar</h4>
+                    <p>Las empresas que no adaptan su modelo de negocio al entorno web corren el riesgo de desaparecer. A continuación, se presenta una tabla comparativa del impacto empresarial:</p>
+                    
+                    <!-- Tabla Semántica -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Característica</th>
+                                <th>Modelo Tradicional</th>
+                                <th>Modelo Basado en Web</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alcance del Mercado</td>
+                                <td>Local / Regional</td>
+                                <td>Global / Internacional</td>
+                            </tr>
+                            <tr>
+                                <td>Horario de Atención</td>
+                                <td>Limitado (Ej. 9 AM - 6 PM)</td>
+                                <td>24/7 ininterrumpido</td>
+                            </tr>
+                            <tr>
+                                <td>Costos de Infraestructura</td>
+                                <td>Altos (Locales físicos)</td>
+                                <td>Reducidos (Servidores, Cloud)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+                
+                <!-- Recurso Multimedia: Video -->
+                <article>
+                    <h3>El futuro de la Web</h3>
+                    <p>Visualiza el siguiente documental sobre cómo la Web 3.0 está cambiando el paradigma del control de datos:</p>
+                    <div class="video-wrapper">
+                        <!-- Video embebido (se puede reemplazar el src por un archivo local ej: src="videos/documental.mp4") -->
+                        <iframe src="videos/Web 3.0.mp4" title="Video explicativo del impacto web" allowfullscreen></iframe>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <!-- Contenido Lateral (Aside) y Formulario -->
+        <aside>
+            <h2>Tecnologías Clave</h2>
+            <p>Pilares que sostienen la web moderna:</p>
+            <!-- Lista Ordenada -->
+            <ol>
+                <li>HTML5 y Semántica</li>
+                <li>CSS3 y Diseño Responsivo</li>
+                <li>JavaScript (Interactividad)</li>
+                <li>APIs RESTful</li>
+                <li>Computación en la Nube</li>
+            </ol>
+
+            <hr style="margin: 25px 0; border: 0; border-top: 1px solid #ddd;">
+
+            <!-- Formulario de Contacto requerido -->
+            <h2>Contáctanos</h2>
+            <p style="font-size: 0.9rem; margin-bottom: 15px;">¿Deseas recibir más información sobre transformación digital?</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required placeholder="juan@ejemplo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required placeholder="Motivo de contacto">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </aside>
+    </div>
+
+    <!-- Pie de Página Semántico -->
+    <footer>
+        <p>&copy; 2026 WebTech Evolution. Proyecto de Implementación de Tecnologías Web.</p>
+        <p>Desarrollado con HTML5 semántico cumpliendo los estándares de la W3C.</p>
+    </footer>
+
+</body>
+</html>
