@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de contacto para consultas sobre transformación digital, desarrollo web e impacto tecnológico en los negocios.">
+    <title>Contacto - Tecnologías Web</title>
+    
+    <!-- Estilos integrados (manteniendo la identidad visual del proyecto) -->
+    <style>
+        :root {
+            --primary-color: #2A1B38;
+            --secondary-color: #E040FB;
+            --accent-color: #00E5FF;
+            --text-color: #333;
+            --bg-color: #F4F7F6;
+            --input-bg: #ffffff;
+            --border-color: #d1d5db;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Cabecera y Navegación */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #4A148C);
+            color: white;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        /* Estructura Principal */
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1.2fr;
+            gap: 40px;
+            padding: 50px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Secciones y Artículos */
+        main section, aside {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Estilos del Formulario Moderno */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--input-bg);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(224, 64, 251, 0.15);
+        }
+
+        button {
+            background: linear-gradient(135deg, var(--secondary-color), #b000cc);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(224, 64, 251, 0.4);
+        }
+
+        /* Aside - Información de Contacto */
+        .info-item {
+            margin-bottom: 25px;
+        }
+
+        .info-item h4 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .info-item p {
+            margin-bottom: 0;
+        }
+
+        ul.social-links {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        ul.social-links li {
+            margin-bottom: 10px;
+        }
+
+        ul.social-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        ul.social-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado Semántico -->
+    <header>
+        <h1>Impacto de la Tecnología</h1>
+        <nav>
+            <ul>
+                <!-- Rutas relativas asumiendo que el archivo está en la carpeta /pages -->
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="sociedad.html">Sociedad</a></li>
+                <li><a href="negocios.html">Negocios</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Contenido Principal: Formulario -->
+        <main>
+            <section>
+                <article>
+                    <h2>Hablemos de Tecnología</h2>
+                    <p>¿Tienes dudas sobre cómo la transformación digital puede impactar tu negocio o comunidad? Completa el siguiente formulario y nuestro equipo de especialistas en tecnologías web se pondrá en contacto contigo a la brevedad.</p>
+                    
+                    <!-- Formulario Semántico según los requerimientos -->
+                    <form action="#" method="POST" class="contact-form">
+                        
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Martínez" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" placeholder="ana.martinez@ejemplo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" placeholder="Consultoría en E-commerce" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Describe brevemente tus dudas o requerimientos..." required></textarea>
+                        </div>
+
+                        <button type="submit">Enviar Mensaje</button>
+                    </form>
+                </article>
+            </section>
+        </main>
+
+        <!-- Barra Lateral Semántica: Datos de Contacto -->
+        <aside>
+            <h2>Datos de Contacto</h2>
+            
+            <div class="info-item">
+                <h4>Oficina Principal</h4>
+                <p>Av. Los Rios, Edificio Centro B.<br>Ciudad Quito, Código Postal 101010.</p>
+            </div>
+
+            <div class="info-item">
+                <h4>Comunícate directamente</h4>
+                <p><strong>Teléfono:</strong> +593 99 123 4567</p>
+                <p><strong>Email:</strong> info_techcenter@gmail.com</p>
+            </div>
+
+            <div class="info-item">
+                <h4>Horario de Atención</h4>
+                <!-- Lista ordenada -->
+                <ol style="margin-left: 20px; color: #555;">
+                    <li>Lunes a Viernes: 08:00 AM - 18:00 PM</li>
+                    <li>Sábados: 09:00 AM - 13:00 PM</li>
+                    <li>Domingos: Cerrado</li>
+                </ol>
+            </div>
+
+            <div class="info-item">
+                <h4>Nuestras Redes</h4>
+                <!-- Lista desordenada -->
+                <ul class="social-links">
+                    <li><a href="#">LinkedIn /webtechevolution</a></li>
+                    <li><a href="#">Twitter @WebTechEvo</a></li>
+                    <li><a href="#">GitHub /webtech-evolution</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Pie de Página Semántico -->
+    <footer>
+        <p>&copy; 2026 WebTech Evolution. Proyecto de Implementación de Tecnologías Web.</p>
+        <p>Contacto | Validación W3C | Accesibilidad Web</p>
+    </footer>
+
+</body>
+</html>
